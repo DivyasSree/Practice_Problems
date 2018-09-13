@@ -1,0 +1,21 @@
+// Obtain the largest string from a string
+import java.lang.Object;
+public class MyClass {
+    public static void main(String args[]) {
+        int big=0;
+        String longStr= new String();
+        String name = new String ("My home is beautiful"); 
+        String[] res = name.split("\\s");
+        //System.out.println(res.length);
+         for (int x=0; x < res.length; x++)
+         {
+            int len = res[x].length();
+            if(big < len)
+            {
+                big = len;
+                longStr = res[x];
+            }
+         }
+         System.out.println("The largest string is " + longStr);
+    }
+}
