@@ -1,0 +1,42 @@
+// Count number of times a letter has occurred in a word
+import java.util.HashMap;
+public class MyClass {
+    public static void main(String args[]) {
+        int charCounter;
+        String name = "LaaaaLaaLanld" ; 
+        HashMap <Character, Integer> map = new HashMap <>();
+        for(char ch: name.toCharArray())
+        {
+            if(map.containsKey(ch))
+            {
+                int val = map.get(ch);
+                map.put(ch, val+1);
+            }
+            else
+                map.put(ch,1);
+        }
+       System.out.println(map);
+    }
+}
+
+// If capitals and small letters are to be ignored
+import java.util.HashMap;
+public class MyClass {
+    public static void main(String args[]) {
+        int charCounter;
+        String name = new String ("LaaaaLaaLanld"); 
+        //name = name.toLowerCase();
+        HashMap <Character, Integer> map = new HashMap <>();
+        for(char ch: name.toCharArray())
+        {
+            if(map.containsKey(ch))
+            {
+                int val = map.get(ch);
+                map.put(ch, val+1);
+            }
+            else
+                map.put(ch,1);
+        }
+       System.out.println(map);
+    }
+}
