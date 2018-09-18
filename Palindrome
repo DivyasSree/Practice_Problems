@@ -1,0 +1,27 @@
+import java.util.*;
+import java.*;
+        
+public class palindrome {
+
+    public static void main(String args[])
+    {
+      int num = 15251;
+      int temp,r,sum = 0;
+      temp = num;
+     
+     while (num>0)
+    {
+      r = num % 10;
+      sum = (sum*10) + r;
+      num = num / 10;
+    }
+    if(temp == sum)
+    {
+      System.out.println("Number is a palindrome");
+    }
+    else
+    {
+        System.out.println("Number is not a palindrome");
+    }
+    }
+}
