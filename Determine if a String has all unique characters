@@ -1,0 +1,32 @@
+import java.util.*;
+import java.*;
+        
+public class palindrome {
+
+    public static void main(String args[])
+    {
+        // should pass
+        String test1 = "abcdef897451";
+        
+        //should fail, many dupes
+        String test2 = "abbccd8871541";
+        
+        //should ??
+        String test3 = "";
+        
+        System.out.println(hasUniqueChar(test1));
+        System.out.println(hasUniqueChar(test3));
+    }
+    
+    public static boolean hasUniqueChar(String testing)
+    {
+        Set<Character> s = new HashSet<>();
+        for(char c: testing.toCharArray()){
+          if(s.contains(c))
+            return false;
+          else 
+            s.add(c);
+        }
+        return true;
+    }
+}
